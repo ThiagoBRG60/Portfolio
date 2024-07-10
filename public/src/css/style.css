@@ -1,0 +1,508 @@
+:root {
+   --background-color: #050816;
+   --text-main: #ffffff;
+   --text-secundary: #AAA6C3;
+   --highlight: #915EFF;
+}
+html {
+   scroll-behavior: smooth;
+   scrollbar-width: thin;
+   scrollbar-color: #915EFF #050816;
+}
+body {
+   background-color: var(--background-color);
+   overflow-x: hidden;
+}
+
+/* header section */
+
+header {
+   display: flex;
+   justify-content: space-around;
+   padding: 25px 50px;
+   position: sticky;
+   background-color: var(--background-color);
+   top: 0px;
+   z-index: 10;
+   border-bottom: 1px solid #915eff31;
+}
+header a {
+   color: var(--text-secundary);
+   position: relative;
+   font-size: 20px;
+   transition: 0.3s;
+}
+header a::before {
+   content: "";
+   position: absolute;
+   bottom: -4px;
+   left: 50%;
+   width: 0%;
+   height: 4px;
+   background-color: var(--highlight);
+   border-radius: 50px;
+   transition: 0.3s;
+}
+header a:hover::before {
+   left: 0%;
+   width: 100%;
+}
+header ul {
+   display: flex;
+   gap: 20px;
+}
+header ul a:hover {
+   color: var(--text-main);
+}
+.main-name {
+   display: flex;
+   align-items: center;
+   color: var(--text-main);
+   font-weight: 600;
+}
+.main-name span {
+   color: var(--highlight);
+   font-size: 20px;
+   margin-left: 5px;
+}
+.main-name i {
+   font-size: 25px;
+   color: var(--highlight);
+}
+.main-name i:first-of-type {
+   margin-right: 5px;
+}
+
+/* introduction section */
+
+.introduction {
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+   padding: 200px 0px;
+   position: relative;
+}
+.introduction::before, .introduction::after {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 82%;
+   left: 50%;
+   width: 25px;
+   height: 50px;
+   border-radius: 50px;
+   border: 3px solid var(--text-secundary);
+}
+.introduction::after {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 80.5%;
+   left: 50%;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: var(--text-secundary);
+   animation: scrollDown 1.2s infinite alternate ease-in-out;
+}
+@keyframes scrollDown {
+ to {
+      top: 83.5%;
+   }
+}
+.introduction p {
+   color: var(--text-secundary);
+   font-size: 18px;
+}
+.introduction h1 {
+   color: var(--text-main);
+   font-size: 50px;
+   font-weight: 600;
+   position: relative;
+}
+.introduction h1::before {
+   content: "";
+   position: absolute;
+   transform: translateY(-50%);
+   top: 30%;
+   left: -45px;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: var(--highlight);
+}
+.introduction h1::after {
+   content: "";
+   position: absolute;
+   top: 20px;
+   left: -35px;
+   width: 5px;
+   height: 300px;
+   background: linear-gradient(to bottom, #915EFF 35%, #3c276b, #150d25, transparent);
+}
+.introduction h1 span {
+   color: var(--highlight);
+}
+.intro-buttons {
+   display: flex;
+   gap: 10px;
+   margin-top: 30px;
+}
+.intro-buttons button, .intro-buttons a {
+   padding: 8px 15px;
+   border: 0;
+   border-radius: 50px;
+   color: var(--text-main);
+   font-weight: 600;
+   font-size: 14px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.intro-buttons button:first-of-type {
+   background-color: #915effd7;
+}
+.intro-buttons a {
+   background-color: transparent;
+   box-shadow: inset 0px 0px 0px 2px var(--highlight);
+}
+.intro-buttons button:hover, .intro-buttons a:hover {
+   filter: drop-shadow(0px 0px 20px #915eff98);
+   transform: scale(1.05);
+}
+.social-media ul {
+   display: flex;
+   gap: 15px;
+   margin-top: 50px;
+}
+.social-media ul li a {
+   color: #915eff80;
+   font-size: 30px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.social-media ul li a:hover {
+   color: var(--highlight);
+   filter: drop-shadow(0px 0px 15px #915effd2);
+}
+
+/* About me section */
+
+.about-me {
+   width: 100%;
+   height: 100vh;
+   padding: 20vh 20vw;
+   background: url(/assets/background-about-me.svg) no-repeat;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+.about-me h2 {
+   color: var(--text-main);
+}
+.about-me p {
+   color: var(--text-secundary);
+}
+.about-me p span {
+   color: var(--highlight);
+   font-weight: 600;
+}
+.about-me::after {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%) rotate(-10deg);
+   top: 15%;
+   left: 88%;
+   width: 180px;
+   height: 180px;
+   background: url(/assets/dino-filled.png) no-repeat;
+   background-size: contain;
+   animation: fadeIcons 1.5s infinite alternate;
+}
+@keyframes fadeIcons {
+   from {
+      opacity: 0.4;
+   } to {
+      opacity: 0.8;
+   }
+}
+
+/* Skills section */
+
+.skills {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 25vh 0;
+   gap: 60px;
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   color: var(--text-main);
+   background: url(/assets/background-skills.png) no-repeat;
+   background-position: top top;
+}
+.skills::before, .skills::after {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%) rotate(-15deg);
+   top: 30%;
+   left: 10%;
+   width: 100px;
+   height: 100px;
+   background: url(/assets/html-drawing.png) no-repeat;
+   animation: fadeIcons 1.5s infinite alternate;
+}
+.skills::after {
+   transform: translate(-50%, -50%) rotate(15deg);
+   top: 75%;
+   left: 85%;
+   background: url(/assets/js-drawing.png) no-repeat;
+}
+.skills ul {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px;
+}
+.skills ul li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   width: 170px;
+   height: 170px;
+   background-color: #070D1E;
+   border-radius: 20px;
+   position: relative;
+   overflow: hidden;
+}
+.skills ul li p {
+   font-size: 18px;
+   font-weight: 600;
+   color: var(--text-main);
+   z-index: 1;
+}
+.skills ul li img {
+   width: 65px;
+   height: 65px;
+   z-index: 1;
+}
+.skills ul li::before {
+   content: "";
+   position: absolute;
+   top: -15%;
+   left: 25%;
+   width: 50%;
+   height: 140%;
+   animation: rotateSkills 6s linear infinite;
+}
+.skills ul li:nth-child(1)::before {
+   background-color: #E44D26;
+}
+.skills ul li:nth-child(2)::before {
+   background-color: #1572B6;
+}
+.skills ul li:nth-child(3)::before {
+   background-color: #FFCA28;
+}
+.skills ul li:nth-child(4)::before {
+   background-color: #CD6799;
+}
+.skills ul li:nth-child(5)::before {
+   background-color: #F03C2E;
+}
+.skills ul:last-of-type li::before {
+   background-color: #00D8FF;
+}
+.skills ul li::after {
+   content: "";
+   position: absolute;
+   background-color: inherit;
+   inset: 5px;
+   border-radius: inherit;
+}
+@keyframes rotateSkills {
+   from {
+      transform: rotate(0deg);
+   } to {
+      transform: rotate(360deg);
+   }
+}
+
+/* Projects section */
+
+.projects {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+   height: 100vh;
+   padding: 30vh 0;
+   background: url(/assets/background-projects.png) no-repeat;
+   background-size: contain;
+   background-position: top center;
+   position: relative;
+}
+.projects::before, .projects::after {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%) rotate(-10deg);
+   top: 50%;
+   left: 10%;
+   width: 100px;
+   height: 100px;
+   background: url(/assets/code-drawing.png) no-repeat;
+   background-size: contain;
+   animation: fadeIcons 1.5s infinite alternate;
+}
+.projects::after {
+   width: 130px;
+   height: 130px;
+   transform: translate(-50%, -50%) rotate(10deg);
+   top: 70%;
+   left: 90%;
+   background: url(/assets/computer-drawing.png) no-repeat;
+   background-size: contain;
+}
+.projects h2 {
+   color: var(--text-main);
+}
+.projects ul {
+   width: 70%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 50px;
+}
+.projects ul li {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--text-main);
+   width: 300px;
+   height: 200px;
+   border-radius: 20px;
+   background-color: #070D1E;
+}
+
+/* Contact section */
+
+.contact {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 100px;
+   height: 100vh;
+   position: relative;
+}
+.contact::before {
+   content: "";
+   position: absolute;
+   transform: translate(-50%, -50%) rotate(15deg);
+   top: 20%;
+   left: 55%;
+   width: 100px;
+   height: 100px;
+   background: url(/assets/envelope-drawing.png) no-repeat;
+   background-size: contain;
+   animation: fadeIcons 1.5s infinite alternate;
+}
+.contact h2 {
+   color: var(--text-main);
+}
+.contact ul {
+   display: flex;
+   gap: 80px;
+}
+.contact ul li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.contact ul li i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 30px;
+   width: 80px;
+   height: 80px;
+   color: var(--highlight);
+   background-color: #070D1E;
+   border-radius: 50%;
+   margin-bottom: 20px;
+   transition: 0.3s;
+}
+.contact ul li i:hover {
+   transform: scale(1.1);
+   filter: drop-shadow(0px 0px 15px #0c1530);
+}
+.contact ul li h3 {
+   color: var(--text-main);
+}
+.contact ul li p {
+   color: var(--text-secundary);
+   font-size: 14px;
+}
+
+/* Footer section */
+
+footer {
+   display: flex;
+   justify-content: space-around;
+   padding: 20px 0;
+   border-top: 1px solid #915eff31;
+}
+footer ul {
+   display: flex;
+   gap: 20px;
+}
+footer h4 {
+   color: var(--text-secundary);
+}
+footer ul li a {
+   color: var(--highlight);
+   transition: 0.3s;
+   font-size: 20px;
+}
+footer ul li a:hover {
+   filter: drop-shadow(0px 0px 15px #915effd2);
+}
+
+/* Three js canvas */
+
+.canvas-planet {
+   width: 600px;
+   height: 600px;
+   cursor: grab;
+}
+.canvas-planet:active {
+   cursor: grabbing;
+}
+.canvas-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+/* Credits planet */
+
+.credits {
+   margin-top: 20px;
+   text-align: center;
+   color: var(--text-secundary);
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 78%;
+   right: 15%;
+}
+.introduction .credits {
+   font-size: 10px;
+}
+.credits a {
+   color: var(--highlight);
+   font-size: 10px;
+}
