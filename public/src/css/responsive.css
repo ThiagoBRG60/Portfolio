@@ -1,0 +1,394 @@
+@media (max-width: 1024px) {   
+   header {
+      padding: 20px 50px;
+   }
+   header a {
+      font-size: 18px;
+   }
+   .main-name span {
+      font-size: 18px;
+   }
+   .main-name i {
+      font-size: 22px;
+   }
+   
+   /* introduction section */
+   
+   .introduction {
+      justify-content: center;
+      gap: 20px;
+      padding: 150px 0px;
+   }
+   .introduction::before, .introduction::after {
+      top: 90%;
+   }
+   .introduction::after {
+      top: 88%;
+   }
+   @keyframes scrollDown {
+      to {
+           top: 92%;
+        }
+     }
+   .introduction p {
+      font-size: 16px;
+   }
+   .introduction h1 {
+      font-size: 35px;
+   }
+   .intro-buttons {
+      margin-top: 25px;
+   }
+   .social-media ul {
+      margin-top: 35px;
+   }
+   
+   /* About me section */
+   
+   .about-me {
+      padding: 20vh 10vw;
+      background: url(/assets/background-about-me.svg) no-repeat center bottom;
+      background-size: contain;
+   }
+   .about-me::after {
+      top: 70%;
+      width: 150px;
+      height: 150px;
+   }
+   
+   /* Skills section */
+   
+   .skills::before, .skills::after {
+      top: 25%;
+   }
+   .skills::after {
+      top: 80%;
+      left: 80%;
+   }
+   .skills ul {
+      gap: 40px;
+   }
+   .skills ul li {
+      width: 140px;
+      height: 140px;
+   }
+   .skills ul li p {
+      font-size: 16px;
+   }
+   .skills ul li img {
+      width: 55px;
+      height: 55px;
+   }
+   
+   /* Projects section */
+   
+   .projects::before, .projects::after {
+      top: 30%;
+   }
+   .projects::after {
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, -50%) rotate(10deg);
+      top: 66%;
+      left: 90%;
+      background: url(/assets/computer-drawing.png) no-repeat;
+      background-size: contain;
+   }
+   .projects ul {
+      width: 80%;
+      gap: 30px;
+   }
+   .projects ul li {
+      width: 250px;
+      height: 150px;
+   }
+   
+   /* Contact section */
+   
+   .contact {
+      gap: 80px;
+   }
+   .contact::before {
+      width: 80px;
+      height: 80px;
+   }
+   
+   /* Three js canvas */
+   
+   .canvas-planet {
+      width: 450px;
+      height: 450px;
+   }
+   
+   /* Credits planet */
+
+   .credits {
+      top: 80%;
+      margin-top: 0px;
+      right: 0%;
+   }
+}
+
+@media (max-width: 768px) {
+   /* introduction section */
+   
+   .introduction {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding: 80px 0px;
+   }
+   .introduction::before, .introduction::after {
+      top: 95%;
+   }
+   .introduction::after {
+      top: 93.5%;
+   }
+   @keyframes scrollDown {
+      to {
+           top: 96.5%;
+        }
+     }
+   .introduction p {
+      font-size: 16px;
+   }
+   .introduction h1 {
+      font-size: 30px;
+   }
+   .intro-buttons {
+      margin-top: 20px;
+   }
+   .social-media ul {
+      margin-top: 20px;
+   }
+   
+   /* About me section */
+   
+   .about-me {
+      padding: 15vh 10vw;
+   }
+   .about-me::after {
+      top: 75%;
+      width: 120px;
+      height: 120px;
+   }
+   .about-me h2 {
+      font-size: 20px;
+   }
+   
+   /* Skills section */
+   
+   .skills {
+      padding: 30vh 0;
+   }
+   .skills::before, .skills::after {
+      top: 28%;
+   }
+   .skills::after {
+      top: 80%;
+   }
+   .skills ul {
+      gap: 25px;
+   }
+   .skills ul li {
+      width: 120px;
+      height: 120px;
+   }
+   .skills ul li p {
+      font-size: 14px;
+   }
+   .skills ul li img {
+      width: 50px;
+      height: 50px;
+   }
+   
+   /* Projects section */
+   
+   .projects {
+      padding: 25vh 0;
+   }
+   .projects::before, .projects::after {
+      top: 25%;
+   }
+   .projects::after {
+      width: 90px;
+      height: 90px;
+      transform: translate(-50%, -50%) rotate(10deg);
+      top: 60%;
+   }
+   .projects ul {
+      width: 90%;
+      gap: 25px;
+   }
+   .projects ul li {
+      width: 200px;
+      height: 150px;
+   }
+   
+   /* Contact section */
+   
+   .contact::before {
+      top: 22%;
+      width: 80px;
+      height: 80px;
+   }
+   .contact ul li p {
+      display: none;
+   }
+   
+   /* Three js canvas */
+   
+   .canvas-planet {
+      width: 370px;
+      height: 370px;
+   }
+   
+   /* Credits planet */
+
+   .credits {
+      top: 89%;
+      right: 5%;
+   }
+}
+
+@media (max-width: 430px) {
+   header {
+      justify-content: space-between;
+   }
+   header nav ul {
+      display: none;
+   }
+   header nav i {
+      font-size: 18px;
+      color: var(--text-main);
+   }
+
+    /* introduction section */
+   
+    .introduction {
+      padding: 60px 0px;
+   }
+   .introduction::before, .introduction::after {
+      display: none;
+   }
+   .introduction p {
+      font-size: 14px;
+   }
+   .introduction h1 {
+      font-size: 25px;
+   }
+   
+   /* About me section */
+   
+   .about-me {
+      padding: 15vh 10vw;
+   }
+   .about-me::after {
+      top: 85%;
+      left: 80%;
+      width: 100px;
+      height: 100px;
+   }
+   .about-me h2 {
+      font-size: 20px;
+   }
+   .about-me p {
+      font-size: 14px;
+   }
+   
+   /* Skills section */
+   
+   .skills {
+      padding: 25vh 0;
+   }
+   .skills::before, .skills::after {
+      display: none;
+   }
+   .skills h2 {
+      font-size: 20px;
+   }
+   .skills ul {
+      justify-content: center;
+      gap: 25px;
+   }
+   .skills ul li {
+      width: 110px;
+      height: 110px;
+   }
+   .skills ul li img {
+      width: 45px;
+      height: 45px;
+   }
+   
+   /* Projects section */
+   
+   .projects {
+      padding: 25vh 0;
+   }
+   .projects::before, .projects::after {
+      top: 18%;
+      left: 15%;
+      width: 80px;
+      height: 80px;
+   }
+   .projects::after {
+      width: 80px;
+      height: 80px;
+      transform: translate(-50%, -50%) rotate(10deg);
+      top: 95%;
+      left: 85%;
+   }
+   .projects h2 {
+      font-size: 20px;
+   }
+   .projects ul {
+      width: 90%;
+      gap: 25px;
+   }
+   .projects ul li {
+      width: 150px;
+      height: 150px;
+   }
+   .projects ul li:last-of-type {
+      display: none;
+   }
+   
+   /* Contact section */
+   
+   .contact::before {
+      top: 25%;
+      width: 80px;
+      height: 80px;
+   }
+   .contact h2 {
+      font-size: 20px;
+   }
+   .contact ul {
+      display: flex;
+      gap: 20px;
+   }
+   .contact ul li i {
+      font-size: 25px;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+   }
+   .contact ul li h3 {
+      font-size: 16px;
+   }
+   
+   /* Three js canvas */
+   
+   .canvas-planet {
+      width: 370px;
+      height: 370px;
+   }
+   
+   /* Credits planet */
+
+   .credits {
+      top: 92%;
+      right: -20%;
+   }  
+}

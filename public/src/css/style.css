@@ -188,14 +188,14 @@ header ul a:hover {
 /* About me section */
 
 .about-me {
+   display: flex;
+   flex-direction: column;
    width: 100%;
    height: 100vh;
    padding: 20vh 20vw;
    background: url(/assets/background-about-me.svg) no-repeat;
    background-size: cover;
    position: relative;
-   display: flex;
-   flex-direction: column;
    gap: 25px;
 }
 .about-me h2 {

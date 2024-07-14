@@ -7,7 +7,14 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // Usar um aspect ratio de 1 inicialmente
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setClearColor(0x000000, 0);
-renderer.setSize(600, 600); // Tamanho inicial para o canvas-planet
+
+window.addEventListener("resize", () => {
+  if (window.outerWidth <= 1024) {
+    renderer.setSize(400, 400);
+  }else {
+    renderer.setSize(600, 600); // Tamanho inicial para o canvas-planet
+  }
+})
 
 // Adiciona o renderer ao elemento canvas-planet
 const canvasPlanet = document.querySelector('.canvas-planet');
