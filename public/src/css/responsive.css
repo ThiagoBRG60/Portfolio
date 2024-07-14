@@ -11,9 +11,6 @@
    .main-name i {
       font-size: 22px;
    }
-   
-   /* introduction section */
-   
    .introduction {
       justify-content: center;
       gap: 20px;
@@ -42,9 +39,6 @@
    .social-media ul {
       margin-top: 35px;
    }
-   
-   /* About me section */
-   
    .about-me {
       padding: 20vh 10vw;
       background: url(/assets/background-about-me.svg) no-repeat center bottom;
@@ -55,9 +49,6 @@
       width: 150px;
       height: 150px;
    }
-   
-   /* Skills section */
-   
    .skills::before, .skills::after {
       top: 25%;
    }
@@ -79,9 +70,6 @@
       width: 55px;
       height: 55px;
    }
-   
-   /* Projects section */
-   
    .projects::before, .projects::after {
       top: 30%;
    }
@@ -102,9 +90,6 @@
       width: 250px;
       height: 150px;
    }
-   
-   /* Contact section */
-   
    .contact {
       gap: 80px;
    }
@@ -112,16 +97,10 @@
       width: 80px;
       height: 80px;
    }
-   
-   /* Three js canvas */
-   
    .canvas-planet {
       width: 450px;
       height: 450px;
    }
-   
-   /* Credits planet */
-
    .credits {
       top: 80%;
       margin-top: 0px;
@@ -130,8 +109,6 @@
 }
 
 @media (max-width: 768px) {
-   /* introduction section */
-   
    .introduction {
       flex-direction: column;
       align-items: center;
@@ -162,9 +139,6 @@
    .social-media ul {
       margin-top: 20px;
    }
-   
-   /* About me section */
-   
    .about-me {
       padding: 15vh 10vw;
    }
@@ -176,9 +150,6 @@
    .about-me h2 {
       font-size: 20px;
    }
-   
-   /* Skills section */
-   
    .skills {
       padding: 30vh 0;
    }
@@ -202,9 +173,6 @@
       width: 50px;
       height: 50px;
    }
-   
-   /* Projects section */
-   
    .projects {
       padding: 25vh 0;
    }
@@ -225,9 +193,6 @@
       width: 200px;
       height: 150px;
    }
-   
-   /* Contact section */
-   
    .contact::before {
       top: 22%;
       width: 80px;
@@ -236,16 +201,10 @@
    .contact ul li p {
       display: none;
    }
-   
-   /* Three js canvas */
-   
    .canvas-planet {
       width: 370px;
       height: 370px;
    }
-   
-   /* Credits planet */
-
    .credits {
       top: 89%;
       right: 5%;
@@ -263,9 +222,6 @@
       font-size: 18px;
       color: var(--text-main);
    }
-
-    /* introduction section */
-   
     .introduction {
       padding: 60px 0px;
    }
@@ -278,9 +234,6 @@
    .introduction h1 {
       font-size: 25px;
    }
-   
-   /* About me section */
-   
    .about-me {
       padding: 15vh 10vw;
    }
@@ -296,9 +249,6 @@
    .about-me p {
       font-size: 14px;
    }
-   
-   /* Skills section */
-   
    .skills {
       padding: 25vh 0;
    }
@@ -320,9 +270,6 @@
       width: 45px;
       height: 45px;
    }
-   
-   /* Projects section */
-   
    .projects {
       padding: 25vh 0;
    }
@@ -353,9 +300,6 @@
    .projects ul li:last-of-type {
       display: none;
    }
-   
-   /* Contact section */
-   
    .contact::before {
       top: 25%;
       width: 80px;
@@ -377,18 +321,91 @@
    .contact ul li h3 {
       font-size: 16px;
    }
-   
-   /* Three js canvas */
-   
    .canvas-planet {
       width: 370px;
       height: 370px;
    }
-   
-   /* Credits planet */
-
    .credits {
       top: 92%;
       right: -20%;
    }  
+}
+
+@media (max-width: 390px) {
+   .about-me::after {
+      top: 15%;
+      width: 60px;
+      height: 60px;
+   }
+}
+
+@media (max-width: 375px) {
+   header nav i {
+      font-size: 18px;
+      color: var(--text-main);
+   }
+   .introduction {
+      padding: 50px 0;
+      gap: 20px;
+   }
+   .introduction h1 {
+      font-size: 24px;
+   }
+   .about-me {
+      padding: 15vh 5vw;
+      gap: 15px;
+   }
+   .about-me p {
+      font-size: 13px;
+   }
+   .skills {
+      padding: 25vh 0;
+      gap: 40px;
+   }
+   .skills ul {
+      justify-content: center;
+      gap: 15px;
+   }
+   .skills ul li {
+      width: 90px;
+      height: 90px;
+   }
+   .skills ul li img {
+      width: 40px;
+      height: 40px;
+   }
+   .skills ul li p {
+      font-size: 13px;
+   }
+   .skills ul li::after {
+      inset: 3px;
+   }
+   .projects {
+      padding: 20vh 0;
+   }
+   .projects::before, .projects::after {
+      display: none;
+   }
+   .projects ul {
+      gap: 20px;
+   }
+   .contact::before {
+      width: 60px;
+      height: 60px;
+   }
+   .contact ul {
+      gap: 20px;
+   }
+   .contact ul li i {
+      font-size: 22px;
+      width: 60px;
+      height: 60px;
+   }
+   .contact ul li h3 {
+      font-size: 14px;
+   }
+   .canvas-planet {
+      width: 300px;
+      height: 300px;
+   }
 }

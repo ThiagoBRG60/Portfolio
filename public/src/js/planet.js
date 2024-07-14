@@ -12,7 +12,7 @@ window.addEventListener("resize", () => {
   if (window.outerWidth <= 1024) {
     renderer.setSize(400, 400);
   }else {
-    renderer.setSize(600, 600); // Tamanho inicial para o canvas-planet
+    renderer.setSize(600, 600);
   }
 })
 
