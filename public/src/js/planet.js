@@ -52,7 +52,6 @@ const loader = new GLTFLoader();
 loader.load(
   '/models/scene.gltf',
   function (gltf) {
-    console.log('modelo carregado porra', gltf);
     // Ajustes no modelo 3D do planeta
     gltf.scene.traverse(function (child) {
       if (child.isMesh) {
