@@ -50,7 +50,7 @@ resizeRendererToDisplaySize();
 // Carregamento do modelo glTF do planeta
 const loader = new GLTFLoader();
 loader.load(
-  '/src/models/scene.gltf',
+  '/models/scene.gltf',
   function (gltf) {
     console.log('modelo carregado porra', gltf);
     // Ajustes no modelo 3D do planeta
