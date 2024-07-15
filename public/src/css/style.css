@@ -477,6 +477,7 @@ footer ul li a:hover {
    width: 600px;
    height: 600px;
    cursor: grab;
+   overflow: hidden;
 }
 .canvas-planet:active {
    cursor: grabbing;
