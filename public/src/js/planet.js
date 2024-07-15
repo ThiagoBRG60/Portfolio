@@ -12,6 +12,8 @@ renderer.setClearColor(0x000000, 0);
 window.addEventListener("resize", () => {
   if (window.outerWidth <= 1024) {
     renderer.setSize(400, 400);
+  }else if (window.outerWidth <= 390) {
+    renderer.setSize(300, 300);
   }else {
     renderer.setSize(600, 600);
   }
