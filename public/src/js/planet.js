@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import modelUrl from '../../assets/purple_planet.glb'
 
 // Configuração da cena, câmera e renderer
 const scene = new THREE.Scene();
@@ -49,8 +50,7 @@ resizeRendererToDisplaySize();
 
 // Carregamento do modelo glTF do planeta
 const loader = new GLTFLoader();
-loader.load(
-  '/models/scene.gltf',
+loader.load( modelUrl,
   function (gltf) {
     // Ajustes no modelo 3D do planeta
     gltf.scene.traverse(function (child) {
