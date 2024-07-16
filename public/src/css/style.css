@@ -32,7 +32,7 @@ header a {
    font-size: 20px;
    transition: 0.3s;
 }
-header a::before {
+header a::before, .menu-mobile ul:first-of-type li a::before {
    content: "";
    position: absolute;
    bottom: -4px;
@@ -43,7 +43,7 @@ header a::before {
    border-radius: 50px;
    transition: 0.3s;
 }
-header a:hover::before {
+header a:hover::before, .menu-mobile ul:first-of-type li a:hover::before {
    left: 0%;
    width: 100%;
 }
@@ -53,6 +53,9 @@ header ul {
 }
 header ul a:hover {
    color: var(--text-main);
+}
+header nav .fa-bars {
+   display: none;
 }
 .main-name {
    display: flex;
@@ -71,6 +74,12 @@ header ul a:hover {
 }
 .main-name i:first-of-type {
    margin-right: 5px;
+}
+
+/* menu mobile */
+
+.menu-mobile {
+   display: none;
 }
 
 /* introduction section */

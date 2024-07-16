@@ -218,9 +218,58 @@
    header nav ul {
       display: none;
    }
-   header nav i {
-      font-size: 18px;
-      color: var(--text-main);
+   header nav {
+      display: flex;
+      align-items: center;
+   }
+   header nav .fa-bars {
+      display: block;
+      font-size: 20px;
+      color: var(--text-secundary);
+   }
+   main {
+      position: relative;
+   }
+   .menu-mobile {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      background-color: #050816fa;
+      transform: translateX(-100%);
+      transition: 0.5s;
+   }
+   .menu-mobile.opened {
+      transform: translateX(0%);
+   }
+   .menu-mobile ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+      padding: 20vh 0 0 0;
+   }
+   .menu-mobile ul li a {
+      font-size: 20px;
+      color: var(--text-secundary);
+      transition: 0.3s;
+      position: relative;
+   }
+   .menu-mobile ul:last-of-type {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      padding: 5vh 0;
+   }
+   .menu-mobile ul:last-of-type li a {
+      font-size: 30px;
+      color: #915eff80;
+   }
+   .menu-mobile ul:last-of-type li a:hover {
+      color: var(--highlight);
+      filter: drop-shadow(0px 0px 15px #915effd2);
    }
     .introduction {
       padding: 60px 0px;
@@ -250,21 +299,28 @@
       font-size: 14px;
    }
    .skills {
-      padding: 25vh 0;
+      height: 100%;
+      padding: 10vh 0;
+      background-size: contain;
    }
    .skills::before, .skills::after {
-      display: none;
+      top: 8%;
+      left: 20%;
+      width: 70px;
+      height: 70px;
+      background-size: cover;
+   }
+   .skills::after {
+      top: 95%;
+      left: 85%;
    }
    .skills h2 {
       font-size: 20px;
    }
    .skills ul {
+      flex-direction: column;
       justify-content: center;
       gap: 25px;
-   }
-   .skills ul li {
-      width: 110px;
-      height: 110px;
    }
    .skills ul li img {
       width: 45px;
@@ -272,6 +328,7 @@
    }
    .projects {
       padding: 25vh 0;
+      background-size: 100% 80px;
    }
    .projects::before, .projects::after {
       top: 18%;
@@ -340,9 +397,17 @@
 }
 
 @media (max-width: 375px) {
-   header nav i {
+   header {
+      padding: 20px 30px;
+   }
+   header a {
       font-size: 18px;
-      color: var(--text-main);
+   }
+   .main-name span {
+      font-size: 18px;
+   }
+   .main-name i {
+      font-size: 20px;
    }
    .introduction {
       padding: 50px 0;
@@ -359,23 +424,11 @@
       font-size: 13px;
    }
    .skills {
-      padding: 25vh 0;
       gap: 40px;
    }
    .skills ul {
       justify-content: center;
       gap: 15px;
-   }
-   .skills ul li {
-      width: 90px;
-      height: 90px;
-   }
-   .skills ul li img {
-      width: 40px;
-      height: 40px;
-   }
-   .skills ul li p {
-      font-size: 13px;
    }
    .skills ul li::after {
       inset: 3px;
@@ -408,4 +461,7 @@
       width: 300px;
       height: 300px;
    }
+   .credits {
+      right: -22%;
+   }  
 }
