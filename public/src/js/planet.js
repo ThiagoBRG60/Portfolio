@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import modelUrl from '../../assets/purple_planet.glb';
+import modelUrlMobile from '../../assets/purple_planet-lighter.glb';
 
 // Configuração da cena, câmera e renderer
 const scene = new THREE.Scene();
@@ -40,8 +41,10 @@ function resizeRendererToDisplaySize() {
 resizeRendererToDisplaySize();
 
 // Carregamento do modelo glTF do planeta
+const isMobile = window.outerWidth <= 768 ? modelUrlMobile : modelUrl
+
 const loader = new GLTFLoader();
-loader.load(modelUrl, function (gltf) {
+loader.load(isMobile, function (gltf) {
   // Ajustes no modelo 3D do planeta
   gltf.scene.traverse(function (child) {
     if (child.isMesh) {
