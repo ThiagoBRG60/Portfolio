@@ -225,7 +225,7 @@ header nav .fa-bars {
    left: 88%;
    width: 180px;
    height: 180px;
-   background: url(/assets/dino-filled.png) no-repeat;
+   background: url(/assets/dino-filled.avif) no-repeat;
    background-size: contain;
    animation: fadeIcons 1.5s infinite alternate;
 }
@@ -249,7 +249,7 @@ header nav .fa-bars {
    height: 100vh;
    position: relative;
    color: var(--text-main);
-   background: url(/assets/background-skills.png) no-repeat;
+   background: url(/assets/background-skills.avif) no-repeat;
    background-position: top top;
 }
 .skills::before, .skills::after {
@@ -260,14 +260,14 @@ header nav .fa-bars {
    left: 10%;
    width: 100px;
    height: 100px;
-   background: url(/assets/html-drawing.png) no-repeat;
+   background: url(/assets/html-drawing.avif) no-repeat;
    animation: fadeIcons 1.5s infinite alternate;
 }
 .skills::after {
    transform: translate(-50%, -50%) rotate(15deg);
    top: 75%;
    left: 85%;
-   background: url(/assets/js-drawing.png) no-repeat;
+   background: url(/assets/js-drawing.avif) no-repeat;
 }
 .skills ul {
    display: flex;
@@ -349,7 +349,7 @@ header nav .fa-bars {
    gap: 50px;
    height: 100vh;
    padding: 30vh 0;
-   background: url(/assets/background-projects.png) no-repeat;
+   background: url(/assets/background-projects.avif) no-repeat;
    background-size: contain;
    background-position: top center;
    position: relative;
@@ -362,7 +362,7 @@ header nav .fa-bars {
    left: 10%;
    width: 100px;
    height: 100px;
-   background: url(/assets/code-drawing.png) no-repeat;
+   background: url(/assets/code-drawing.avif) no-repeat;
    background-size: contain;
    animation: fadeIcons 1.5s infinite alternate;
 }
@@ -372,7 +372,7 @@ header nav .fa-bars {
    transform: translate(-50%, -50%) rotate(10deg);
    top: 70%;
    left: 90%;
-   background: url(/assets/computer-drawing.png) no-repeat;
+   background: url(/assets/computer-drawing.avif) no-repeat;
    background-size: contain;
 }
 .projects h2 {
@@ -415,7 +415,7 @@ header nav .fa-bars {
    left: 55%;
    width: 100px;
    height: 100px;
-   background: url(/assets/envelope-drawing.png) no-repeat;
+   background: url(/assets/envelope-drawing.avif) no-repeat;
    background-size: contain;
    animation: fadeIcons 1.5s infinite alternate;
 }

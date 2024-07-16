@@ -41,7 +41,7 @@
    }
    .about-me {
       padding: 20vh 10vw;
-      background: url(/assets/background-about-me.svg) no-repeat center bottom;
+      background-position: center bottom;
       background-size: contain;
    }
    .about-me::after {
@@ -79,7 +79,6 @@
       transform: translate(-50%, -50%) rotate(10deg);
       top: 66%;
       left: 90%;
-      background: url(/assets/computer-drawing.png) no-repeat;
       background-size: contain;
    }
    .projects ul {
