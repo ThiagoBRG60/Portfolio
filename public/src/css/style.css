@@ -14,23 +14,28 @@ body {
    overflow-x: hidden;
 }
 
-/* header section */
+/* Header section */
 
 header {
+   width: 100%;
    display: flex;
    justify-content: space-around;
    padding: 25px 50px;
-   position: sticky;
-   background-color: var(--background-color);
-   top: 0px;
+   position: fixed;
+   top: 0;
+   left: 0;
    z-index: 10;
    border-bottom: 1px solid #915eff31;
+   background-color: var(--background-color);
 }
 header a {
    color: var(--text-secundary);
    position: relative;
    font-size: 20px;
    transition: 0.3s;
+}
+header ul a:hover {
+   color: var(--text-main);
 }
 header a::before, .menu-mobile ul:first-of-type li a::before {
    content: "";
@@ -51,9 +56,6 @@ header ul {
    display: flex;
    gap: 20px;
 }
-header ul a:hover {
-   color: var(--text-main);
-}
 header nav .fa-bars {
    display: none;
 }
@@ -66,7 +68,6 @@ header nav .fa-bars {
 .main-name span {
    color: var(--highlight);
    font-size: 20px;
-   margin-left: 5px;
 }
 .main-name i {
    font-size: 25px;
@@ -76,26 +77,27 @@ header nav .fa-bars {
    margin-right: 5px;
 }
 
-/* menu mobile */
+/* Menu mobile */
 
 .menu-mobile {
    display: none;
 }
 
-/* introduction section */
+/* Introduction section */
 
 .introduction {
+   min-height: 100%;
    display: flex;
    justify-content: center;
    gap: 50px;
-   padding: 200px 0px;
+   padding: 250px 100px;
    position: relative;
 }
 .introduction::before, .introduction::after {
    content: "";
    position: absolute;
    transform: translate(-50%, -50%);
-   top: 82%;
+   bottom: 15%;
    left: 50%;
    width: 25px;
    height: 50px;
@@ -106,7 +108,7 @@ header nav .fa-bars {
    content: "";
    position: absolute;
    transform: translate(-50%, -50%);
-   top: 80.5%;
+   bottom: 19.8%;
    left: 50%;
    width: 10px;
    height: 10px;
@@ -116,18 +118,21 @@ header nav .fa-bars {
 }
 @keyframes scrollDown {
  to {
-      top: 83.5%;
+      bottom: 17.5%;
    }
 }
 .introduction p {
    color: var(--text-secundary);
-   font-size: 18px;
+   font-size: 16px;
 }
 .introduction h1 {
    color: var(--text-main);
-   font-size: 50px;
+   font-size: 45px;
    font-weight: 600;
    position: relative;
+}
+.introduction h1 span {
+   color: var(--highlight);
 }
 .introduction h1::before {
    content: "";
@@ -149,13 +154,10 @@ header nav .fa-bars {
    height: 300px;
    background: linear-gradient(to bottom, #915EFF 35%, #3c276b, #150d25, transparent);
 }
-.introduction h1 span {
-   color: var(--highlight);
-}
 .intro-buttons {
    display: flex;
    gap: 10px;
-   margin-top: 30px;
+   margin-top: 25px;
 }
 .intro-buttons button, .intro-buttons a {
    padding: 8px 15px;
@@ -166,8 +168,6 @@ header nav .fa-bars {
    font-size: 14px;
    cursor: pointer;
    transition: 0.3s;
-}
-.intro-buttons button:first-of-type {
    background-color: #915effd7;
 }
 .intro-buttons a {
@@ -181,7 +181,7 @@ header nav .fa-bars {
 .social-media ul {
    display: flex;
    gap: 15px;
-   margin-top: 50px;
+   margin-top: 40px;
 }
 .social-media ul li a {
    color: #915eff80;
@@ -189,7 +189,7 @@ header nav .fa-bars {
    cursor: pointer;
    transition: 0.3s;
 }
-.social-media ul li a:hover {
+.social-media ul li a:hover, footer ul li a:hover, .menu-mobile ul:last-of-type li a:hover {
    color: var(--highlight);
    filter: drop-shadow(0px 0px 15px #915effd2);
 }
@@ -197,17 +197,14 @@ header nav .fa-bars {
 /* About me section */
 
 .about-me {
+   min-height: 100%;
    display: flex;
    flex-direction: column;
-   width: 100%;
-   height: 100vh;
+   gap: 25px;
    padding: 20vh 20vw;
    background: url(/assets/background-about-me.svg) no-repeat;
    background-size: cover;
    position: relative;
-   gap: 25px;
-}
-.about-me h2 {
    color: var(--text-main);
 }
 .about-me p {
@@ -221,11 +218,11 @@ header nav .fa-bars {
    content: "";
    position: absolute;
    transform: translate(-50%, -50%) rotate(-10deg);
-   top: 15%;
-   left: 88%;
-   width: 180px;
-   height: 180px;
-   background: url(/assets/dino-filled.avif) no-repeat;
+   top: 25%;
+   left: 90%;
+   width: 160px;
+   height: 160px;
+   background: url(/assets/icons/dino-filled.avif) no-repeat;
    background-size: contain;
    animation: fadeIcons 1.5s infinite alternate;
 }
@@ -246,11 +243,10 @@ header nav .fa-bars {
    padding: 25vh 0;
    gap: 60px;
    width: 100%;
-   height: 100vh;
+   min-height: 100%;
    position: relative;
    color: var(--text-main);
    background: url(/assets/background-skills.avif) no-repeat;
-   background-position: top top;
 }
 .skills::before, .skills::after {
    content: "";
@@ -258,21 +254,22 @@ header nav .fa-bars {
    transform: translate(-50%, -50%) rotate(-15deg);
    top: 30%;
    left: 10%;
-   width: 100px;
-   height: 100px;
-   background: url(/assets/html-drawing.avif) no-repeat;
+   width: 90px;
+   height: 90px;
+   background: url(/assets/icons/html-drawing.avif) no-repeat;
+   background-size: cover;
    animation: fadeIcons 1.5s infinite alternate;
 }
 .skills::after {
    transform: translate(-50%, -50%) rotate(15deg);
    top: 75%;
    left: 85%;
-   background: url(/assets/js-drawing.avif) no-repeat;
+   background: url(/assets/icons/js-drawing.avif) no-repeat;
 }
 .skills ul {
    display: flex;
    flex-wrap: wrap;
-   gap: 50px;
+   gap: 2.5vw;
 }
 .skills ul li {
    display: flex;
@@ -280,23 +277,12 @@ header nav .fa-bars {
    align-items: center;
    justify-content: center;
    gap: 10px;
-   width: 170px;
-   height: 170px;
+   width: 160px;
+   height: 160px;
    background-color: #070D1E;
    border-radius: 20px;
    position: relative;
    overflow: hidden;
-}
-.skills ul li p {
-   font-size: 18px;
-   font-weight: 600;
-   color: var(--text-main);
-   z-index: 1;
-}
-.skills ul li img {
-   width: 65px;
-   height: 65px;
-   z-index: 1;
 }
 .skills ul li::before {
    content: "";
@@ -306,6 +292,13 @@ header nav .fa-bars {
    width: 50%;
    height: 140%;
    animation: rotateSkills 6s linear infinite;
+}
+.skills ul li::after {
+   content: "";
+   position: absolute;
+   background-color: inherit;
+   inset: 5px;
+   border-radius: inherit;
 }
 .skills ul li:nth-child(1)::before {
    background-color: #E44D26;
@@ -325,12 +318,16 @@ header nav .fa-bars {
 .skills ul:last-of-type li::before {
    background-color: #00D8FF;
 }
-.skills ul li::after {
-   content: "";
-   position: absolute;
-   background-color: inherit;
-   inset: 5px;
-   border-radius: inherit;
+.skills ul li p {
+   font-size: 16px;
+   font-weight: 600;
+   color: var(--text-main);
+   z-index: 1;
+}
+.skills ul li img {
+   width: 40%;
+   height: 40%;
+   z-index: 1;
 }
 @keyframes rotateSkills {
    from {
@@ -347,49 +344,46 @@ header nav .fa-bars {
    flex-direction: column;
    align-items: center;
    gap: 50px;
-   height: 100vh;
+   min-height: 100%;
    padding: 30vh 0;
    background: url(/assets/background-projects.avif) no-repeat;
    background-size: contain;
    background-position: top center;
    position: relative;
+   color: var(--text-main);
 }
 .projects::before, .projects::after {
    content: "";
    position: absolute;
    transform: translate(-50%, -50%) rotate(-10deg);
-   top: 50%;
+   top: 45%;
    left: 10%;
-   width: 100px;
-   height: 100px;
-   background: url(/assets/code-drawing.avif) no-repeat;
-   background-size: contain;
+   width: 90px;
+   height: 90px;
+   background: url(/assets/icons/code-drawing.avif) no-repeat;
+   background-size: cover;
    animation: fadeIcons 1.5s infinite alternate;
 }
 .projects::after {
-   width: 130px;
-   height: 130px;
+   width: 100px;
+   height: 100px;
    transform: translate(-50%, -50%) rotate(10deg);
-   top: 70%;
+   top: 75%;
    left: 90%;
-   background: url(/assets/computer-drawing.avif) no-repeat;
+   background: url(/assets/icons/computer-drawing.avif) no-repeat;
    background-size: contain;
 }
-.projects h2 {
-   color: var(--text-main);
-}
 .projects ul {
-   width: 70%;
+   width: 100%;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   gap: 50px;
+   gap: 2.5vw;
 }
 .projects ul li {
    display: flex;
    align-items: center;
    justify-content: center;
-   color: var(--text-main);
    width: 300px;
    height: 200px;
    border-radius: 20px;
@@ -403,9 +397,10 @@ header nav .fa-bars {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   gap: 100px;
-   height: 100vh;
+   gap: 80px;
+   min-height: 100%;
    position: relative;
+   color: var(--text-main);
 }
 .contact::before {
    content: "";
@@ -413,23 +408,21 @@ header nav .fa-bars {
    transform: translate(-50%, -50%) rotate(15deg);
    top: 20%;
    left: 55%;
-   width: 100px;
-   height: 100px;
-   background: url(/assets/envelope-drawing.avif) no-repeat;
+   width: 90px;
+   height: 90px;
+   background: url(/assets/icons/envelope-drawing.avif) no-repeat;
    background-size: contain;
    animation: fadeIcons 1.5s infinite alternate;
 }
-.contact h2 {
-   color: var(--text-main);
-}
 .contact ul {
    display: flex;
-   gap: 80px;
+   gap: 4vw;
 }
 .contact ul li {
    display: flex;
    flex-direction: column;
    align-items: center;
+   gap: 20px;
 }
 .contact ul li i {
    display: flex;
@@ -441,19 +434,11 @@ header nav .fa-bars {
    color: var(--highlight);
    background-color: #070D1E;
    border-radius: 50%;
-   margin-bottom: 20px;
    transition: 0.3s;
 }
 .contact ul li i:hover {
    transform: scale(1.1);
    filter: drop-shadow(0px 0px 15px #0c1530);
-}
-.contact ul li h3 {
-   color: var(--text-main);
-}
-.contact ul li p {
-   color: var(--text-secundary);
-   font-size: 14px;
 }
 
 /* Footer section */
@@ -463,21 +448,16 @@ footer {
    justify-content: space-around;
    padding: 20px 0;
    border-top: 1px solid #915eff31;
+   color: var(--text-secundary);
 }
 footer ul {
    display: flex;
    gap: 20px;
-}
-footer h4 {
-   color: var(--text-secundary);
+   font-size: 20px;
 }
 footer ul li a {
    color: var(--highlight);
    transition: 0.3s;
-   font-size: 20px;
-}
-footer ul li a:hover {
-   filter: drop-shadow(0px 0px 15px #915effd2);
 }
 
 /* Three js canvas */
@@ -486,12 +466,15 @@ footer ul li a:hover {
    width: 600px;
    height: 600px;
    cursor: grab;
-   overflow: hidden;
+   position: relative;
+   text-align: center;
 }
 .canvas-planet:active {
    cursor: grabbing;
 }
 .canvas-container {
+   width: 100%;
+   height: 100%;
    position: absolute;
    top: 0;
    left: 0;
@@ -500,19 +483,15 @@ footer ul li a:hover {
 
 /* Credits planet */
 
-.credits {
-   margin-top: 20px;
-   text-align: center;
+.canvas-planet .credits {
+   width: 100%;
    color: var(--text-secundary);
    position: absolute;
    transform: translate(-50%, -50%);
-   top: 78%;
-   right: 15%;
-}
-.introduction .credits {
+   bottom: -20px;
+   left: 50%;
    font-size: 10px;
 }
 .credits a {
    color: var(--highlight);
-   font-size: 10px;
 }
