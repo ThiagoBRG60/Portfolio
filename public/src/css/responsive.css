@@ -229,7 +229,6 @@
    .projects {
       padding: 40vh 0;
    }
-
    .contact {
       padding: 30vh 0;
    }
@@ -283,6 +282,9 @@
 
    /* contact section */
 
+   .contact {
+      padding: 30vh 0;
+   }
    .contact::before {
       top: 18%;
       width: 80px;
