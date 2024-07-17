@@ -201,8 +201,9 @@ header nav .fa-bars {
    display: flex;
    flex-direction: column;
    gap: 25px;
-   padding: 20vh 20vw;
+   padding: 20vh 20vw 50vh 20vw;
    background: url(/assets/background-about-me.svg) no-repeat;
+   background-position: bottom;
    background-size: cover;
    position: relative;
    color: var(--text-main);
@@ -400,6 +401,7 @@ header nav .fa-bars {
    gap: 80px;
    min-height: 100%;
    position: relative;
+   padding: 30vh 0;
    color: var(--text-main);
 }
 .contact::before {
