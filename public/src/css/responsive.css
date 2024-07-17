@@ -236,6 +236,10 @@
 }
 
 @media (max-width: 390px) and (orientation: portrait) {
+   header {
+      padding: 15px 20px;
+   }
+
    .introduction h1 {
       font-size: 25px;
    }
