@@ -221,6 +221,20 @@
    }
 }
 
+@media (max-height: 375px) and (orientation: landscape) {
+   .about-me::after {
+      top: 10%;
+      left: 85%;
+   }
+   .projects {
+      padding: 40vh 0;
+   }
+
+   .contact {
+      padding: 30vh 0;
+   }
+}
+
 @media (max-width: 390px) and (orientation: portrait) {
    .introduction h1 {
       font-size: 25px;
