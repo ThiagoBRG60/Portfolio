@@ -225,6 +225,10 @@
    .introduction h1 {
       font-size: 25px;
    }
+   .intro-buttons button, .intro-buttons a {
+      padding: 8px 15px;
+      font-size: 13px;
+   }
 
    /* skills section */
 
@@ -262,7 +266,7 @@
    /* contact section */
 
    .contact::before {
-      top: 20%;
+      top: 18%;
       width: 80px;
       height: 80px;
    }
