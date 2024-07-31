@@ -159,7 +159,7 @@ header nav .fa-bars {
    gap: 10px;
    margin-top: 25px;
 }
-.intro-buttons button, .intro-buttons a {
+.intro-buttons a:first-of-type, .intro-buttons a {
    padding: 8px 15px;
    border: 0;
    border-radius: 50px;
@@ -170,11 +170,11 @@ header nav .fa-bars {
    transition: 0.3s;
    background-color: #915effd7;
 }
-.intro-buttons a {
+.intro-buttons a:last-of-type {
    background-color: transparent;
    box-shadow: inset 0px 0px 0px 2px var(--highlight);
 }
-.intro-buttons button:hover, .intro-buttons a:hover {
+.intro-buttons a:hover {
    filter: drop-shadow(0px 0px 20px #915eff98);
    transform: scale(1.05);
 }
@@ -284,6 +284,7 @@ header nav .fa-bars {
    border-radius: 20px;
    position: relative;
    overflow: hidden;
+   text-align: center;
 }
 .skills ul li::before {
    content: "";
@@ -383,12 +384,109 @@ header nav .fa-bars {
 }
 .projects ul li {
    display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 300px;
-   height: 200px;
+   flex-direction: column;
+   justify-content: flex-end;
+   width: 400px;
+   height: 300px;
+   padding: 30px;
    border-radius: 20px;
    background-color: #070D1E;
+   border: 2px solid #09102b;
+   cursor: pointer;
+   position: relative;
+   transition: 0.3s linear;
+   overflow: hidden;
+   z-index: 1;
+}
+.projects ul li:hover {
+   border: 2px solid var(--highlight);
+}
+.projects ul li::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: inherit;
+   height: inherit;
+   background: linear-gradient(to top, #000000f6, #0000004d);
+   opacity: 0;
+   transition: 0.3s ease-in-out;
+   z-index: -1;
+}
+.projects ul li:hover::before {
+   opacity: 1;
+}
+.project-details {
+   opacity: 0;
+   transition: 0.3s ease-in;
+}
+.projects ul li:hover .project-details {
+   opacity: 1;
+}
+.project-details > p {
+   font-weight: 600;
+   margin-bottom: 5px;
+   color: var(--text-secundary);
+}
+.project-details h3 {
+   color: var(--highlight);
+}
+.project-techs {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.project-techs .icons img:last-of-type{
+   margin-left: 5px;
+}
+.project-techs .icons img {
+   width: 50px;
+   height: 50px;
+   transition: 0.3s;
+}
+.project-techs .icons img:hover {
+   opacity: 0.5;
+}
+.project-techs a {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding: 5px 10px;
+   border-radius: 50px;
+   font-size: 14px;
+   border: 0;
+   background-color: transparent;
+   border: 2px solid var(--highlight);
+   color: var(--text-main);
+   cursor: pointer;
+   transition: 0.3s;
+}
+.project-techs a:hover {
+   transform: scale(1.1);
+   filter: drop-shadow(0px 0px 20px #915EFF);
+}
+
+/* freelancer project */
+
+.projects ul:first-of-type li {
+   width: 700px;
+   height: 400px;
+   background: url('/assets/projects/ummilhaodepix.png') no-repeat;
+   background-size: cover;
+}
+.projects ul:first-of-type li h3 {
+   font-size: 28px;
+}
+
+/* personal projects */
+
+.projects ul:last-of-type li:first-of-type {
+   background: url('/assets/projects/speaknotes.png') no-repeat;
+   background-size: cover;
+}
+.projects ul:last-of-type li .project-techs .icons img {
+   width: 40px;
+   height: 40px;
 }
 
 /* Contact section */

@@ -124,17 +124,20 @@
       background-size: 100% 100px;
    }
    .projects::before, .projects::after {
-      top: 20%;
+      top: 12%;
    }
    .projects::after {
       top: 95%;
    }
-   .projects ul li {
-      width: 250px;
-      height: 150px;
-   }
-   .projects ul li:last-of-type {
+   .projects ul:last-of-type li:last-of-type {
       display: none;
+   }
+   .projects ul:first-of-type li {
+      width: 600px;
+      height: 350px;
+   }
+   .projects ul:first-of-type li h3 {
+      font-size: 26px;
    }
 
    /* contact section */
@@ -199,11 +202,11 @@
    /* projects section */
 
    .projects::before, .projects::after {
-      top: 12%;
+      top: 10%;
       left: 15%;
    }
    .projects::after {
-      top: 90%;
+      top: 92%;
       left: 80%;
    }
 
@@ -242,7 +245,7 @@
    .introduction h1 {
       font-size: 25px;
    }
-   .intro-buttons button, .intro-buttons a {
+   .intro-buttons a {
       padding: 8px 15px;
       font-size: 13px;
    }
@@ -272,12 +275,28 @@
    .projects::before, .projects::after {
       width: 80px;
       height: 80px;
-      top: 10%;
+      top: 7%;
    }
    .projects::after {
       width: 80px;
       height: 80px;
-      top: 92%;
+      top: 94%;
+   }
+   .projects ul:first-of-type li h3 {
+      font-size: 24px;
+   }
+   .projects ul:last-of-type li {
+      width: 400px;
+      height: 300px;
+      padding: 30px;
+   }
+   .projects ul:first-of-type li .project-techs .icons img {
+      width: 40px;
+      height: 40px;
+   }
+   .projects ul:last-of-type li .project-techs .icons img {
+      width: 30px;
+      height: 30px;
    }
 
    /* contact section */
