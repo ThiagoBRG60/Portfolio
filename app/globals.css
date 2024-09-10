@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #915eff #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: #050816;
+  position: relative;
+}
+
+main {
+  height: 100%;
+}
+
+@layer components {
+  .headerIcon {
+    @apply h-5 text-highlight
+  }
+  
+  .headerLinkBorder {
+    @apply after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-highlight after:rounded-full after:transition-all after:duration-[400ms] hover:after:w-full hover:after:left-0
+  }
+
+  .buttonStyle {
+    @apply flex justify-center items-center min-w-[110px] h-[35px] rounded-full bg-background border-2 border-highlight text-textPrimary font-semibold transition duration-[400ms] hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(145,94,255,0.4)]
+  }
+
+  .introSectionDetail {
+    @apply before:w-[5px] before:h-[220px] before:content-[''] before:absolute before:top-0 before:-left-6 before:bg-gradient-to-b before:from-highlight before:to-transparent xl:before:top-10 xl:before:h-[250px] 2xl:before:top-20;
+    @apply after:w-[25px] after:h-[25px] after:absolute after:-top-1 after:-left-[34px] after:bg-highlight after:rounded-full xl:after:top-6 2xl:after:top-16
+  }
+
+  .peaksBgTop {
+    @apply before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-peaks-detail-bg before:bg-no-repeat before:bg-contain before:rotate-180 before:bg-bottom before:-z-10
+  }
+
+  .cardBgDark {
+    @apply before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-80 before:opacity-0 before:hover:opacity-100 before:transition before:duration-[400ms] before:rounded-[10px]
+  }
+
+  .opacityHover {
+    @apply opacity-0 group-hover:opacity-100 transition duration-[400ms] z-10
+  }
+
+  .contactBg {
+    @apply before:content-[""] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-contact-waves-bg before:bg-cover before:bg-top before:opacity-30 before:-z-10
+  }
+
+  .contactInput {
+    @apply w-full min-h-[40px] text-textSecondary px-[15px] text-sm bg-cardsbg border-[1px] border-highlight border-opacity-50 rounded-[10px] outline-none transition duration-[300ms] focus:border-opacity-100 xl:min-h-[50px] xl:text-base
+  }
+
+  .contactLabel {
+    @apply absolute top-[7px] left-[15px] rounded-[5px] transition-all duration-[200ms] bg-cardsbg xl:top-[12px] group-focus-within:p-1 group-focus-within:text-highlight group-focus-within:-top-[15px] group-focus-within:left-[15px] group-focus-within:text-sm
+  }
+}
