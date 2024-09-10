@@ -8,7 +8,7 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useEffect, useState } from "react"
 
-const page = () => {
+const AllProjects = () => {
   const positions = ['0px', '320px', '640px', '960px', '1280px'];
   const [count, setCount] = useState(0);
   const [cardPosition, setCardPosition] = useState(positions[0]);
@@ -56,4 +56,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AllProjects
