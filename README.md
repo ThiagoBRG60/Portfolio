@@ -13,7 +13,7 @@
    </a>
 </p>
 
-![Resultado final do projeto](./public/portfolio-2.gif)
+![Resultado final do projeto](./public/portfolio.gif)
 
 ## 📝 Descrição
 
