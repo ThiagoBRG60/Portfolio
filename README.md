@@ -108,12 +108,9 @@ Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue
 
 Caso tenha alguma dúvida, entre em contato comigo pelo meu email:
 
-<p style="display: flex; flex-direction: column; gap: 5px">
-   <img style="align-self: flex-start" alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white"/>
-   <a href="mailto:thiagocorreadev@gmail.com">
-      thiagocorreadev@gmail.com
-   </a>
-</p>
+<a href="mailto:thiagocorreadev@gmail.com" title="Gmail">
+   <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=LINK-DO-SEU-GMAIL" alt="Gmail"/>
+</a>
 
 ## 📄 Licença
 
