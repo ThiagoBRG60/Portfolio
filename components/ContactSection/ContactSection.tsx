@@ -4,7 +4,7 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="relative h-dvh px-3 flex items-center justify-center text-center contactBg">
+    <section id="contato" className="relative h-dvh landscape:h-auto py-40 px-3 flex items-center justify-center text-center contactBg lg:landscape:h-dvh">
       <div className="flex flex-col justify-between items-center w-[400px] h-[220px] py-6 bg-background border-[1px] border-highlight rounded-[20px] md:w-[500px] md:h-[250px] xl:w-[600px] xl:h-[300px] xl:py-10">
          <div className="flex flex-col gap-[10px]">
             <h2 className="font-bold text-textPrimary text-xl md:text-2xl">
