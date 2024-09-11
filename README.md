@@ -21,6 +21,8 @@ Meu portfólio pessoal, com o objetivo de mostrar meus projetos e habilidades. P
 
 Esse projeto é totalmente aberto para a comunidade contribuir e utilizar como base para seus próprios portfólios.
 
+**Observação:** Falta adicionar o restante dos projetos na seção de projetos, porém vou adicionar em breve. Fique atento às atualizações!
+
 ## 🚀 Funcionalidades
 
 - Exibição de projetos pessoais
@@ -106,8 +108,8 @@ Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue
 
 Caso tenha alguma dúvida, entre em contato comigo pelo meu email:
 
-<p style="display: flex; align-items: center; gap: 10px">
-   <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white"/>
+<p style="display: flex; flex-direction: column; gap: 5px">
+   <img style="align-self: flex-start" alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white"/>
    <a href="mailto:thiagocorreadev@gmail.com">
       thiagocorreadev@gmail.com
    </a>
