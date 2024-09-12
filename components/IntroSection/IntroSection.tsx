@@ -8,7 +8,7 @@ const poppins = Poppins({weight: ["700"], subsets: ['latin']})
 const IntroSection = () => {
   return (
     <section className="h-auto flex flex-col items-center gap-[50px] pt-28 bg-center bg-intro-section-bg bg-cover bg-no-repeat portrait:sm:h-dvh landscape:lg:h-dvh md:pt-32 xl:flex-row xl:justify-center xl:gap-0">
-      <div className="relative xxs:introSectionDetail  xl:self-start xl:pt-10 2xl:pt-20">
+      <div className="animate-fadeInMove relative xxs:introSectionDetail  xl:self-start xl:pt-10 2xl:pt-20">
          <h1 className={`${poppins.className} font-bold text-textPrimary text-[24px] xs:text-[26px] md:text-[30px]`}>
             Olá, eu sou o
             <span className="text-highlight">&nbsp;Thiago</span>

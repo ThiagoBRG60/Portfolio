@@ -20,6 +20,30 @@ const config: Config = {
         "intro-section-bg": "url(/backgrounds/intro-section-bg.avif)",
         "peaks-detail-bg": "url(/backgrounds/peaks-detail-bg.svg)",
         "contact-waves-bg": "url(/backgrounds/contact-section-bg.avif)"
+      },
+      animation: {
+        fadeInMove: 'fadeInMove 1.5s ease',
+        fadeInScale: 'fadeInScale 2s ease'
+      },
+      keyframes: {
+        fadeInMove: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-100%)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0%)'
+          }
+        },
+        fadeInScale: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          }
+        }
       }
     },
     screens: {
