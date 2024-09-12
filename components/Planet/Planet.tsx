@@ -7,7 +7,7 @@ const Loading = () => {
 
 const Planet = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-[300px] h-[300px] xxs:w-[350px] xxs:h-[350px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[550px] 2xl:h-[550px]">
       <Suspense fallback={<Loading/>}>
         <PurplePlanet/>
       </Suspense>

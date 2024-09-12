@@ -23,7 +23,7 @@ const config: Config = {
       },
       animation: {
         fadeInMove: 'fadeInMove 1.5s ease',
-        fadeInScale: 'fadeInScale 2s ease'
+        fadeIn: 'fadeInScale 2s ease'
       },
       keyframes: {
         fadeInMove: {
@@ -36,7 +36,7 @@ const config: Config = {
             transform: 'translateY(0%)'
           }
         },
-        fadeInScale: {
+        fadeIn: {
           '0%': {
             opacity: '0',
           },

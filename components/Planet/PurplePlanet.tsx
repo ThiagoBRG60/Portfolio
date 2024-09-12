@@ -56,9 +56,9 @@ const PurplePlanet = () => {
   }, [])
 
   return (
-    <div ref={ref} className='w-[300px] h-[300px] xxs:w-[350px] xxs:h-[350px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[550px] 2xl:h-[550px]'>
+    <div ref={ref} className='w-full h-full'>
       {showPlanet && 
-         <Canvas className='animate-fadeInScale cursor-grab active:cursor-grabbing' camera={{ position: [0, 0, 5], fov: 50 }}>
+         <Canvas className='animate-fadeIn cursor-grab active:cursor-grabbing' camera={{ position: [0, 0, 5], fov: 50 }}>
          <Model />
          <OrbitControls 
            enableDamping={true}
