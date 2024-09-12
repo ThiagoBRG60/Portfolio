@@ -23,7 +23,7 @@ const config: Config = {
       },
       animation: {
         fadeInMove: 'fadeInMove 1.5s ease',
-        fadeIn: 'fadeInScale 2s ease'
+        fadeIn: 'fadeIn 2s ease'
       },
       keyframes: {
         fadeInMove: {
