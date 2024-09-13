@@ -4,6 +4,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 import * as THREE from 'three';
+import { useInView } from 'react-intersection-observer';
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, '/models/purple_planet-lighter.glb');
@@ -33,42 +34,24 @@ const Model = () => {
 };
 
 const PurplePlanet = () => {
-  const [showPlanet, setShowPlanet] = useState(false)
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowPlanet(entry.isIntersecting)
-      },
-      {threshold: 0.1}
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
-      }
-    }
-  }, [])
+  const {ref, inView} = useInView({
+    threshold: 0.1
+  })
 
   return (
-    <div ref={ref} className='w-full h-full'>
-      {showPlanet && 
-         <Canvas className='animate-fadeIn cursor-grab active:cursor-grabbing' camera={{ position: [0, 0, 5], fov: 50 }}>
-         <Model />
-         <OrbitControls 
-           enableDamping={true}
-           enableZoom={false}
-           enablePan={false}
-           minPolarAngle={Math.PI / 2}
-           maxPolarAngle={Math.PI / 2}
-         />
-       </Canvas>
-      }
+    <div ref={ref} className="w-full h-full">
+      {inView && (
+        <Canvas className='animate-fadeIn cursor-grab active:cursor-grabbing' camera={{ position: [0, 0, 5], fov: 50 }}>
+          <Model/>
+          <OrbitControls 
+            enableDamping={true}
+            enableZoom={false}
+            enablePan={false}
+            minPolarAngle={Math.PI / 2}
+            maxPolarAngle={Math.PI / 2}
+          />
+        </Canvas>
+      )}
     </div>
   );
 };

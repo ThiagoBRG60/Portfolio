@@ -1,0 +1,89 @@
+.slick-slide > div {
+   margin: 0 10px;
+   width: 300px;
+   height: 400px;
+}
+
+.slick-dots {
+   bottom: -30px;
+}
+
+.slick-dots li {
+   margin: 0;
+}
+
+.slick-dots li button::before {
+   font-size: 12px;
+   color: rgb(170, 166, 195);
+   opacity: 0.7;
+}
+
+.slick-dots li.slick-active button::before {
+   color: #915eff;
+   opacity: 1;
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+   opacity: 1;
+}
+
+.slick-prev {
+   left: 0px;
+}
+
+.slick-arrow.slick-prev, .slick-arrow.slick-next {
+   width: 40px;
+   height: 40px;
+   border: 2px solid #915eff;
+   border-radius: 50%;
+   background-color: #050816;
+   z-index: 1;
+}
+
+.slick-next {
+   right: 0px;
+}
+
+.slick-prev::before, .slick-next::before {
+   content: "\2039";
+   font-family: sans-serif;
+   line-height: 0.4;
+   color: transparent;
+   font-weight: 900;
+   color: #fff;
+   font-size: 40px;
+}
+
+.slick-next::before {
+   content: '\203A';
+}
+
+@media (min-width: 350px) {
+   .slick-prev {
+      left: -15px;
+   }
+   
+   .slick-next {
+      right: -15px;
+   }
+}
+
+@media (min-width: 425px) {
+   .slick-prev {
+      left: -25px;
+   }
+   
+   .slick-next {
+      right: -25px;
+   }
+}
+
+@media (min-width: 768px) {
+   .slick-prev {
+      left: -45px;
+   }
+   
+   .slick-next {
+      right: -45px;
+   }
+}
