@@ -1,0 +1,21 @@
+{
+  "name": "Thiago Correa - Portfólio",
+  "short_name": "TC Portfólio",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#6F32F3",
+  "background_color": "#010617",
+  "display": "standalone"
+}

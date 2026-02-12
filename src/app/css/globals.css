@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+   --font-marmelat: "Marmelat", "sans-serif";
+}
+
+@theme inline {
+   --color-background: #010617;
+   --color-background-90: #010617E6;
+   --color-background-50: #01061780;
+
+   --color-white-85: #FFFFFFD9;
+   --color-white-60: #FFFFFF99;
+   --color-white-50: #FFFFFF80;
+
+   --color-section-title-gradient: linear-gradient(to right, #C2B1EB 0%, #6F32F3 100%);
+   --color-hero-accent-gradient: linear-gradient(to bottom, #6F32F3 0%, #6F32F3 60%, transparent 100%);
+
+   --color-highlight: #6F32F3;
+   --color-highlight-50: #6F32F380;
+   --color-highlight-25: #6F32F340;
+   --color-highlight-text: oklch(59.75% 0.26 288.192);
+
+   --color-tech-card-background: #0C0A2F;
+   --color-tech-card-accent: linear-gradient(to right, #6F32F3 0%, #220F4A 100%);
+   --color-tech-card-icon-background: #191841;
+
+   --color-project-card-gradient: linear-gradient(to bottom, #000022 0%, #0F0C3F 100%);
+   --color-project-card-title-gradient: linear-gradient(to right, #FFFFFF 0%, #C2B1EB 100%);
+   --color-project-card-info-background: #110F35B3;
+   --color-project-card-tech-background: #1A1249;
+
+   --color-contact-card-background: linear-gradient(to bottom, #0E0C3C 0%, #090826 100%);
+   --color-contact-card-input-background: #110D38;
+   --color-contact-card-socials-background: #110C3A;
+
+   --animate-slideRight: slideRight .5s ease forwards;
+   --animate-slideDown: slideDown 2s .5s ease forwards;
+   --animate-scaleUp: scaleUp 1s ease forwards;
+   --animate-shrinkLeft: shrinkLeft 5s 1s linear forwards;
+   --animate-expand: expand .5s ease forwards;
+   --animate-slideUp: slideUp 1s ease-out forwards;
+
+   --breakpoint-xxs: 375px;
+   --breakpoint-xs: 412px;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
+	font-family: var(--font-marmelat);
+   background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+   line-height: normal;
+}
+
+svg.highlighted-icons {
+   --icon-primary-color: var(--color-highlight);
+   --icon-secondary-color: #7b42f5;
+   --icon-tertiary-color: #000000;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+   width: 2px;
+}
+
+@media (min-width: 1440px) {
+   .scrollbar-thin::-webkit-scrollbar {
+      width: 3px;
+   }
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+   background-color: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 50px;
+   background-color: var(--color-highlight);
+}

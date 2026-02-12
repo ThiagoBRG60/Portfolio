@@ -1,0 +1,29 @@
+@keyframes slideRight {
+   0% {transform: translateX(-100px); opacity: 0.8;}
+   100% {transform: translateX(0px); opacity: 1;}
+}
+
+@keyframes slideDown {
+   0% {transform: translateY(-200px); opacity: 0;}
+   100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes scaleUp {
+   0% {transform: scale(0.9); opacity: 0;}
+   100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes shrinkLeft {
+   0% {transform: translateX(0px);}
+   100% {transform: translateX(-100%);}
+}
+
+@keyframes expand {
+   0% {transform: scale(0.5); opacity: 0;}
+   100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes slideUp {
+   0% {transform: translateY(0);}
+   100% {transform: translateY(-50%);}
+}
