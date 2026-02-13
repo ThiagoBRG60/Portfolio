@@ -11,10 +11,9 @@
 </p>
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/7be608c8-39d0-4e90-b92d-6afb10153ec0" alt"project demo"/>
+  <img src="https://github.com/user-attachments/assets/7be608c8-39d0-4e90-b92d-6afb10153ec0" alt="project demo"/>
 </div>
 
->>>>>>> cc16a96 (docs: add portfolio demo GIF to README)
 ## 📝 Descrição
 
 Meu portfólio pessoal desenvolvido com foco em performance, segurança e experiência do usuário. Apresenta meus projetos e habilidades através de uma interface moderna, com renderização 3D de um planeta interativo.
@@ -112,6 +111,6 @@ Copyright © 2026 Thiago Correa. Todos os direitos reservados.
 
 Consulte o arquivo [LICENSE](./LICENSE) para os termos completos de uso.
 
----
+<hr/>
 
 ⭐ Se esse projeto te inspirou de alguma forma, considere deixar uma estrela!
