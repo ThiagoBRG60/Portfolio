@@ -37,6 +37,9 @@ export const metadata: Metadata = baseMetadata
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="pt-BR">
+         <head>
+            <meta name="google-site-verification" content="9p1_adKGGNjjV4rjyzr_75jkg5qzUjNnAvoxvIndsNY"/>
+         </head>
 			<body className={`${marmelat.variable} antialiased`}>
             <HolyLoader color="#6F32F3" height="2px" speed={500}/>
             <ScrollBehavior/>
