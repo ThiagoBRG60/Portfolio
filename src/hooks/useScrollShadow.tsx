@@ -6,14 +6,14 @@ type ShadowPositionProps = {[key: string]: {position: ShadowPositionType}}
 
 function useScrollShadow(breakpoint: string, visibleCardState: CardStateType) {
    const [shadowPosition, setShadowPosition] = useState<ShadowPositionProps>({"1440px": {position: "none"}, "768px": {position: "none"}, "412px": {position: "none"}, "320px": {position: "none"}})
-   const cardListRef = useRef<HTMLUListElement | null>(null)
+   const technologyListRef = useRef<HTMLUListElement | null>(null)
    const observerRef = useRef<IntersectionObserver | null>(null)
-   const elementsRef = useRef<Element[] | null>(null)
+   const scrollMarkersRef = useRef<Element[] | null>(null)
    const breakpointRef = useRef(breakpoint)
    const shadowPositionRef = useRef(shadowPosition[breakpointRef.current].position)
 
-   const setElementsRef = () => elementsRef.current = Array.from(document.querySelectorAll(".scroll-marker"))
-   const connectObserver = () => elementsRef.current?.forEach(element => observerRef.current?.observe(element))
+   const setElementsRef = () => scrollMarkersRef.current = Array.from(document.querySelectorAll(".scroll-marker"))
+   const connectObserver = () => scrollMarkersRef.current?.forEach(element => observerRef.current?.observe(element))
    const disconnectObserver = () => observerRef.current?.disconnect()
 
    useEffect(() => {
@@ -36,14 +36,14 @@ function useScrollShadow(breakpoint: string, visibleCardState: CardStateType) {
       observerRef.current = new IntersectionObserver((entries) => {
          const currentPosition = shadowPositionRef.current
 
-         if (!isScrollable(cardListRef.current as Element)) {
+         if (!isScrollable(technologyListRef.current as Element)) {
             if (currentPosition !== "none") setShadowPosition((prevState) => ({...prevState, [breakpointRef.current]: {position: "none"}}))
             return
          }
          
          entries.forEach(entry => {
             if (entry.isIntersecting) {
-               const targetIndex = elementsRef.current?.indexOf(entry.target)
+               const targetIndex = scrollMarkersRef.current?.indexOf(entry.target)
                const newPosition = targetIndex === 0 ? "top" : "bottom"
 
                if (currentPosition !== newPosition) setShadowPosition((prevState) => ({...prevState, [breakpointRef.current]: {position: newPosition}}))
@@ -58,7 +58,7 @@ function useScrollShadow(breakpoint: string, visibleCardState: CardStateType) {
       return () => disconnectObserver()
    }, [])
 
-   return { cardListRef: cardListRef, shadowPosition: shadowPosition[breakpoint].position, isScrollable: isScrollable(cardListRef.current as Element) }
+   return { technologyListRef: technologyListRef, shadowPosition: shadowPosition[breakpoint].position, isScrollable: isScrollable(technologyListRef.current as Element) }
 }
 
 function isScrollable(element: Element) {

@@ -8,6 +8,8 @@ function useDraggableMenu(setIsMobileMenuActive: () => void) {
    useEffect(() => {
       if (!menuRef.current) return
 
+      const mediaQuery = window.matchMedia("(max-width: 767px)")
+
       function handlePointerDown(e: PointerEvent) {
          if (e.button !== 0 || !menuRef.current) return
 
@@ -43,18 +45,35 @@ function useDraggableMenu(setIsMobileMenuActive: () => void) {
          menuRef.current.releasePointerCapture(e.pointerId)
       }
 
-      menuRef.current.addEventListener("pointerdown", handlePointerDown)
-      menuRef.current.addEventListener("pointermove", handlePointerMove)
-      menuRef.current.addEventListener("pointerup", handlePointerUp)
-      menuRef.current.addEventListener("pointercancel", handlePointerUp)
-      
-      return () => {
+      function addListeners() {
+         if (!menuRef.current) return
+
+         menuRef.current.addEventListener("pointerdown", handlePointerDown)
+         menuRef.current.addEventListener("pointermove", handlePointerMove)
+         menuRef.current.addEventListener("pointerup", handlePointerUp)
+         menuRef.current.addEventListener("pointercancel", handlePointerUp)
+      }
+
+      function removeListeners() {
          if (!menuRef.current) return
 
          menuRef.current.removeEventListener("pointerdown", handlePointerDown)
          menuRef.current.removeEventListener("pointermove", handlePointerMove)
          menuRef.current.removeEventListener("pointerup", handlePointerUp)
          menuRef.current.removeEventListener("pointercancel", handlePointerUp)
+      }
+
+      function handleMediaChange(e: MediaQueryListEvent | MediaQueryList) {
+         e.matches ? addListeners() : removeListeners()
+      }
+
+      handleMediaChange(mediaQuery)
+
+      mediaQuery.addEventListener("change", handleMediaChange)
+      
+      return () => {
+         mediaQuery.removeEventListener("change", handleMediaChange)
+         removeListeners()
       }
    }, [])
 

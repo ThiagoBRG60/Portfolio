@@ -11,7 +11,7 @@ import Icon from "@/components/Icon"
 const TechnologiesSection = () => {
    const { breakpoint } = useBreakpointStore()
    const { visibleTechnologies, visibleCardState, activeFilter, cardAnimationKey, setVisibleCardState, setActiveFilter } = useTechnologiesStore()
-   const { cardListRef, shadowPosition, isScrollable } = useScrollShadow(breakpoint, visibleCardState)
+   const { technologyListRef, shadowPosition, isScrollable } = useScrollShadow(breakpoint, visibleCardState)
 
 	return (
       <Section id="tecnologias" title="Tecnologias e Ferramentas" className="flex-col gap-2.5 px-1.25 xxs:px-2.5" wavePosition="both" description="Abaixo estão as tecnologias que utilizo no desenvolvimento de projetos, incluindo frontend, backend e ferramentas de desenvolvimento.">
@@ -28,7 +28,7 @@ const TechnologiesSection = () => {
          </div>
 
          <div className={`${isScrollable && "pr-1.25 translate-x-[2.5px] xl:pr-2.5"} overflow-hidden relative after:content-[''] after:w-full after:h-full after:absolute after:bottom-0 after:left-0 after:bg-[linear-gradient(to_bottom,transparent_80%,var(--color-background))] after:duration-300 after:pointer-events-none before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-[linear-gradient(to_top,transparent_80%,var(--color-background))] before:duration-300 before:pointer-events-none before:z-1 ${shadowPosition === "none" ? "after:opacity-0 before:opacity-0" : shadowPosition === "top" ? "after:opacity-100 before:opacity-0" : shadowPosition === "bottom" ? "after:opacity-0 before:opacity-100" : "after:opacity-100 before:opacity-100"}`}>
-            <ul ref={cardListRef} style={{gridTemplateColumns: `repeat(${Math.min(technologyDefaults[breakpoint].grid, visibleTechnologies.length)}, minmax(0, 1fr))`}} className={`max-h-98.75 grid gap-2.5 mt-2.5 ${isScrollable ? "overflow-y-auto pr-2.5 translate-x-1.25 xl:pr-3.75 xl:translate-x-2.5" : "overflow-hidden"} scrollbar-thin xs:mt-3.75`}>
+            <ul ref={technologyListRef} style={{gridTemplateColumns: `repeat(${Math.min(technologyDefaults[breakpoint].grid, visibleTechnologies.length)}, minmax(0, 1fr))`}} className={`max-h-98.75 grid gap-2.5 mt-2.5 ${isScrollable ? "overflow-y-auto pr-2.5 translate-x-1.25 xl:pr-3.75 xl:translate-x-2.5" : "overflow-hidden"} scrollbar-thin xs:mt-3.75`}>
                {(() => {
                   const slicedTechnologies = visibleTechnologies.slice(0, technologyDefaults[breakpoint].cards * visibleCardState[breakpoint].blockCount)
 
